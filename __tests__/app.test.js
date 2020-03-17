@@ -6,15 +6,16 @@ describe('app routes', () => {
     return request(app)
       .get('/')
       .then(res => {
-        expect(res.body).toEqual('hi');
+        expect(res.text).toEqual('hi');
       });
   });
 
   it('creates a plain text page', () => {
     return request(app)
       .post('/echo')
+      .send('is there an echo in here?')
       .then(res => {
-        expect(res.body).toEqual('is there an echo in here?');
+        expect(res.text).toEqual('is there an echo in here?');
       });
   });
   
@@ -61,7 +62,7 @@ describe('app routes', () => {
     return request(app)
       .get('/404')
       .then(res => {
-        expect(res.text).toEqual('not found');
+        expect(res.text).toEqual('Not Found');
       });
   });
   
