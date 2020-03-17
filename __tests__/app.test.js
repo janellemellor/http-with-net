@@ -24,11 +24,11 @@ describe('app routes', () => {
       .get('/red')
       .then(res => {
         expect(res.text).toEqual(`
-            <html>
-                <body>
-                    <h1>This is red<h1>
-                </body>
-            </html>`);
+          <html>
+            <body>
+              <h1>This is red<h1>
+            </body>
+          </html>`);
       });
   });
 
@@ -37,11 +37,11 @@ describe('app routes', () => {
       .get('/green')
       .then(res => {
         expect(res.text).toEqual(`
-            <html>
-                <body>
-                    <h1>This is green<h1>
-                </body>
-            </html>`);
+          <html>
+            <body>
+              <h1>This is green<h1>
+            </body>
+          </html>`);
       });
   });
 
@@ -50,11 +50,11 @@ describe('app routes', () => {
       .get('/blue')
       .then(res => {
         expect(res.text).toEqual(`
-            <html>
-                <body>
-                    <h1>This is blue<h1>
-                </body>
-            </html>`);
+          <html>
+            <body>
+              <h1>This is blue<h1>
+            </body>
+          </html>`);
       });
   });
 
