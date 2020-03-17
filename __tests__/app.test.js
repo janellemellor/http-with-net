@@ -57,7 +57,13 @@ describe('app routes', () => {
       });
   });
 
-
+  it('responds with a 404', () => {
+    return request(app)
+      .get('/404')
+      .then(res => {
+        expect(res.text).toEqual('not found');
+      });
+  });
   
 });
 
